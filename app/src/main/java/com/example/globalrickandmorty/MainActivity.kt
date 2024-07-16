@@ -27,16 +27,25 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
 
-        val rickAndMortyService: RickAndMortyService = retrofit.create(RickAndMortyService::class.java)
+        val rickAndMortyService: RickAndMortyService =
+            retrofit.create(RickAndMortyService::class.java)
         rickAndMortyService.getCharacterById(54).enqueue(object : Callback<CharacterResponse> {
-            override fun onResponse(p0: Call<CharacterResponse>, response: Response<CharacterResponse>) {
-               Log.i("MainActivity", response.toString())
-               if (!response.isSuccessful) {
-                   Toast.makeText(this@MainActivity, "Unsuccessful network call!", Toast.LENGTH_LONG).show()
-                   return
-               }
-               val body = response.body()!!
-               val name = body.name
+            override fun onResponse(
+                p0: Call<CharacterResponse>,
+                response: Response<CharacterResponse>
+            ) {
+                Log.i("MainActivity", response.toString())
+
+                if (!response.isSuccessful) {
+                    Toast.makeText(
+                        this@MainActivity,
+                        "Unsuccessful network call!",
+                        Toast.LENGTH_LONG
+                    ).show()
+                    return
+                }
+                val body = response.body()!!
+                val name = body.name
                 textView.text = name
             }
 
