@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         val rickAndMortyService: RickAndMortyService = retrofit.create(RickAndMortyService::class.java)
-        rickAndMortyService.getCharacterById().enqueue(object : Callback<CharacterResponse> {
+        rickAndMortyService.getCharacterById(54).enqueue(object : Callback<CharacterResponse> {
             override fun onResponse(p0: Call<CharacterResponse>, response: Response<CharacterResponse>) {
                Log.i("MainActivity", response.toString())
                if (!response.isSuccessful) {
