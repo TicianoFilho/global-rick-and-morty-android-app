@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GlobalRickAndMorty</string>
+    <string name="species">Species</string>
+    <string name="origin">Origin</string>
 </resources>

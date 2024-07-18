@@ -46,6 +46,7 @@
         android:layout_height="wrap_content"
         android:textColor="?attr/colorOnBackground"
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@id/nameTextView"
         app:layout_constraintTop_toBottomOf="@id/nameTextView"
         tools:text="alive" />
@@ -68,10 +69,10 @@
         android:layout_margin="16dp"
         android:textColor="?attr/colorOnBackground"
         android:textSize="24sp"
-        android:textStyle="italic"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider"
-        tools:text="Origin" />
+        android:text="@string/origin"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/originTextView"
@@ -79,6 +80,7 @@
         android:layout_height="wrap_content"
         android:textColor="?attr/colorOnBackground"
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@id/originLabelTextView"
         app:layout_constraintTop_toBottomOf="@id/originLabelTextView"
         tools:text="Earth" />
@@ -90,10 +92,10 @@
         android:layout_margin="16dp"
         android:textColor="?attr/colorOnBackground"
         android:textSize="24sp"
-        android:textStyle="italic"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/originTextView"
-        tools:text="Species" />
+        android:text="@string/species" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/speciesTextView"
@@ -101,9 +103,10 @@
         android:layout_height="wrap_content"
         android:textColor="?attr/colorOnBackground"
         android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@id/speciesLabelTextView"
         app:layout_constraintTop_toBottomOf="@id/speciesLabelTextView"
-        tools:text="species" />
+        tools:text="Human" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
